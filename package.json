@@ -1,0 +1,21 @@
+{
+    "name": "node-express-handlebars",
+    "version": "1.0.0",
+    "description": "A burger eating app using node, express, and handlebars",
+    "main": "server.js",
+    "scripts": {
+      "test": "node server.js"
+    },
+    "keywords": [
+      "Node.js",
+      "Express.js",
+      "handlebars"
+    ],
+    "dependencies": {
+      "body-parser": "^1.15.2",
+      "express": "^4.14.0",
+      "express-handlebars": "^3.0.0",
+      "method-override": "^2.3.6",
+      "mysql": "^2.11.1"
+    }
+  }
