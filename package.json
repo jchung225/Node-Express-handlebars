@@ -1,5 +1,5 @@
 {
-  "name": "express-handlebars",
+  "name": "Xpress-Bars",
   "version": "1.0.0",
   "description": "A burger eating app using node, express, and handlebars",
   "main": "server.js",
@@ -15,7 +15,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "express-handlebars": "^3.0.0",
+    "express-handlebars": "^3.1.0",
     "install": "^0.13.0",
     "method-override": "^2.3.10",
     "mysql": "^2.17.1"
