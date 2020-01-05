@@ -1,44 +1,19 @@
 var express = require('express');
-var burger_router = express.Router();
-var burger_call = require('../models/burger.js');
-var bodyParser = require('body-parser');
+var burger = require("../models/burger");
+var router = express.Router();
 
-burger_router.use(bodyParser.json());
-burger_router.use(bodyParser.urlencoded({extended: false}));
-burger_router.use(bodyParser.text());
-burger_router.use(bodyParser.json({type:'application/vnd.api+json'}));
-
-burger_router.get('/', function(req,res){
-  res.redirect('/burger');
-});
-
-burger_router.get('/burger', function(req,res){
-  burger_call.read(function(data){
-    // console.log(data);
-    var hbs_object = {burger: data};
-    // console.log(hbs_object);
-    res.render('index', hbs_object);
+router.get("/", function(req, res){
+  burger.selectAll(function(data){
+    var hbsObject = {
+      burgers: data
+    };
+    console.log(hbsObject);
+    res.render("index", hbsObject);
   });
 });
 
-burger_router.post('/burger/add', function(req, res){
-  // console.log(req.body.user_burger)
-  burger_call.insert(req.body.user_burger, function(data){
-    res.redirect('/burger');
+router.post("/api/burgers", function(req,res){
+  burger.insertOne(["burger_name", "devoured"],[req.body.burger_name, req.body.devoured], function(result){
+    res.json({id: result.insertId});
   });
 });
-
-burger_router.put('/burger/update/:id?', function(req,res){
-  var user_id = parseInt(req.params.id);
-  burger_call.update(user_id, function(data){
-    res.redirect('/burger');
-  });
-});
-
-burger_router.put('/burger/delete/:id?', function(req,res){
-  var user_id = parseInt(req.params.id);
-  burger_call.delete(user_id, function(data){
-    res.redirect('/burger');
-  });
-});
-module.exports = burger_router;
