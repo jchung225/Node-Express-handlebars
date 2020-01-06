@@ -1,32 +1,30 @@
 {
-  "name": "Xpress-Bars",
+  "name": "burger",
   "version": "1.0.0",
-  "description": "A burger eating app using node, express, and handlebars",
-  "main": "server.js",
+  "description": "Eat the Burger! A MySQL, Node, Express, Handlebars restaurant app that lets users input the names of burgers they'd like to eat.",
+  "main": "index.js",
   "scripts": {
-    "test": "node server.js",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "Node.js",
-    "Express.js",
-    "handlebars"
-  ],
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
-    "method-override": "^2.3.10",
-    "mysql": "^2.17.1"
+  "engines": {
+    "node": "4.1.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jchung225/Node-Express-handlebars.git"
+    "url": "git+https://github.com/jchung225/Node-Express-handlebars/.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jchung225/Node-Express-handlebars/issues"
   },
-  "homepage": "https://github.com/jchung225/Node-Express-handlebars#readme"
+  "homepage": "https://github.com/jchung225/Node-Express-handlebars/#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.6",
+    "mysql": "^2.12.0"
+  }
 }
+
