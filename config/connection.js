@@ -7,12 +7,14 @@ if(process.env.JAWSDB_URL){
 }
 else{
   connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : '', 
+    host: "localhost",
+  port: 3306,
+  user: "root",
+  password: "Soccertiger159!",
     database : 'burgers_db' 
   });
 }
+
 
 
 module.exports = connection;

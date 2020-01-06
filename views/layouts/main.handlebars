@@ -1,62 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
 
-    <title>Eat da Burger!</title>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/assets/js/burgers.js"></script>
 
-    <link rel="icon" href="/assets/img/Krabby_Patty.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/burger_style.css">
-  </head>
-  <body>
-  
-    <div class="container">
-      
-      <br>
+	<title>Eat Da Burger!</title>
+	<!-- Materialize CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</head>
 
-      <center>
-        <div class="row">
-          <img src="/assets/img/Krabby_Patty.png">
-        </div>
-      </center>
+<body class="amber accent-1">
+	<div class="container">
+		<header class="header">
+			<div class="row center card amber accent-2 z-depth-1">
+				<h2 class="teal-text text-darken-2">
+					<img src="/assets/img/burger.png" width="150px">
+					<br>Eat Da Burger!</h2>
+			</div>
+		</header>
+		<!-- Page Content goes here -->
+		<main>
+			{{{ body }}}
+		</main>
 
-      <center>
-        <h1 class="red_font">Eat da Burger! <small class="tiny_text">Best with a side of audio.</small></h1>
-      </center>
-      
-      <br>
-      
+		<footer class="page-footer card amber accent-2 z-depth-1">
+			<div class="container">
+				<div class="row">
+					<div class="col s6 push-s3">
+						<h4 class="teal-text text-darken-4">Add a Burger</h4>
+						<form class="create-form">
 
-      {{{body}}}
+							<div class="form-group input-field">
+								<label class="teal-text text-darken-1" for="bg">Add your burger name to the menu:</label>
+								<input type="text" id="bg" name="name">
+							</div>
+
+							<button class="btn waves-effect waves-light" type="submit">Add Burger</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 
-      <br><br>
+	</div>
+</body>
 
-      <form action="burger/create" method="POST"> 
-        
-        <div class="row">
-          <div class="col-md-3"></div> 
-
-          <div class="form-group col-md-6">
-            <center><label for="new_burger" class="red_font">Request a new burger and place your order!</label></center>
-            <textarea class="form-control" columns="8" rows="4" id="new_burger" name="burger_name"></textarea>
-          </div>
-
-          <div class="col-md-3"></div> 
-        </div>
-      
-        <center>
-          <button id="submit-button" type="submit" class="btn btn-danger">Place Order</button>
-        </center>
-
-      </form>
-
-      <br>
-
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="/assets/javascript/burger_sounds.js"></script>
-
-  </body>
 </html>
